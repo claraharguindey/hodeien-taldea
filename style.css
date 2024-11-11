@@ -1,0 +1,20 @@
+#menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 1;
+  }
+  #menu a {
+    color: #FFF;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+  }
+  #menu a:hover {
+    filter: blur(3px);
+  }
