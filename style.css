@@ -154,12 +154,13 @@ header nav ul li a:hover {
   color: #000;
   margin: 0;
 }
+
 #proyecto1 {
   margin-top: 0;
 }
 
 #proyecto2 {
-  margin-top: 90px;
+  margin-top: 200px;
 }
 
 #proyecto3 {
@@ -223,6 +224,7 @@ button:hover {
   .izquierda {
     border-bottom: 1px solid black;
   }
+
   .derecha {
     grid-template-columns: 1fr;
   }
