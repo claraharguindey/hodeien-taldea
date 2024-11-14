@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Río</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Hodeien Taldea</a></li>
+          <li><a href="/territorio">Territorio</a></li>
+          <li><a href="/rio">Río</a></li>
+          <li><a href="/palabra">Palabra</a></li>
+          <li><a href="https://desmusea.com/" target="_blank">Desmusea</a></li>
+        </ul>
+      </nav>
+      <div class="linea-header"></div>
+      <nav id="submenu">
+        <ul>
+          <li><a href="rio.html">Río</a></li>
+          <li><a href="huerto.html">Huertos</a></li>
+          <li><a href="subida.html">Subida Olentzero</a></li>
+        </ul>
+      </nav>
+      <div class="linea-header"></div>
+    </header>
+
+    <a-scene>
+      <a-sky src="panoramas/rio.jpg"></a-sky>
+      <a-entity camera look-controls position="0 1.6 0"></a-entity>
+      <a-light type="ambient" color="#FFF"></a-light>
+    </a-scene>
+  </body>
+</html>

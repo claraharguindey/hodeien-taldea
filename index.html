@@ -1,23 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plaza</title>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <title>Hodeien Taldea</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="menu">
-      <a href="rio.html">Río</a>
-      <a href="huerto.html">Huertos</a>
-      <a href="subida.html">Subida Olentzero</a>
-    </div>
+</head>
 
-    <a-scene>
-      <a-sky src="panoramas/plaza.jpg"></a-sky>
-      <a-entity camera look-controls position="0 1.6 0"></a-entity>
-      <a-light type="ambient" color="#FFF"></a-light>
-    </a-scene>
-  </body>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Hodeien Taldea</a></li>
+                <li><a href="/territorio">Territorio</a></li>
+                <li><a href="/rio">Río</a></li>
+                <li><a href="/palabra">Palabra</a></li>
+                <li><a href="https://desmusea.com/" target="_blank">Desmusea</a></li>
+            </ul>
+        </nav>
+        <div class="linea-header"></div>
+    </header>
+
+    <div class="contenedor">
+        <div id="mitad-izquierda" class="mitad izquierda">
+            <div class="images-wrapper">
+                <img src="img/margaritas.gif" alt="Imagen 1">
+                <img src="img/margaritas2.gif" alt="Imagen 2">
+            </div>
+            <p> Hodeien taldea es un club de lectura que, por medio del encuentro y la experimentación colectiva con
+                diferentes tecnologías, pretende generar nuevas narrativas en torno a la localidad de Huarte y su
+                contexto. A través de la lectura y navegación de recursos bibliográficos, y la activación de los
+                materiales encontrados, imaginamos otras posibilidades de relacionarnos con el entorno, proponiendo
+                procesos de digitalización desde lo común.</p>
+            <p>
+                El proyecto se desarrolla entre los meses de septiembre y noviembre de 2024 en Huarte (Navarra), gracias
+                a la Residencia de investigación en Mediación del Centro Huarte.
+            </p>
+        </div>
+
+        <div class="linea-vertical"></div>
+
+        <div class="mitad derecha">
+            <section id="proyecto1" class="proyecto">
+                <img src="territorio/panoramas/huertos.jpg" alt="Imagen de Proyecto 1">
+                <h2>Territorio</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quibusdam maiores dolore harum explicabo
+                    impedit vitae odit porro, labore atque incidunt. Mollitia odio, unde iure aperiam enim nihil
+                    doloremque doloribus.</p>
+            </section>
+            <section id="proyecto2" class="proyecto">
+                <img src="img/rio.gif" alt="Imagen de Proyecto 2">
+                <h2>Río</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quibusdam maiores dolore harum explicabo
+                    impedit vitae odit porro, labore atque incidunt. Mollitia odio, unde iure aperiam enim nihil
+                    doloremque doloribus.</p>
+            </section>
+            <section id="proyecto3" class="proyecto">
+                <img src="img/mano.jpeg" alt="Imagen de Proyecto 3">
+                <h2>Palabra</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quibusdam maiores dolore harum explicabo
+                    impedit vitae odit porro, labore atque incidunt. Mollitia odio, unde iure aperiam enim nihil
+                    doloremque doloribus.</p>
+            </section>
+
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+
 </html>

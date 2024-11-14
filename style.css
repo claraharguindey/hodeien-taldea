@@ -1,20 +1,229 @@
-#menu {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    color: #FFF;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    z-index: 1;
+@font-face {
+  font-family: "Hodeien";
+  src: url("./fonts/Hodeien.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hodeien";
+  src: url("./fonts/Hodeien-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  font-family: "Hodeien", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #000;
+}
+
+header {
+  width: 100vw;
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #555;
+}
+
+.linea-header {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.contenedor {
+  display: flex;
+  height: 100vh;
+}
+
+.izquierda {
+  width: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: cenlter;
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#mitad-izquierda {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#mitad-izquierda canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.images-wrapper,
+#mitad-izquierda p {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.images-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 12px;
+  width: 100%;
+  justify-content: left;
+}
+
+.izquierda img {
+  width: 20%;
+  margin-bottom: 20px;
+  max-height: fit-content;
+}
+
+.izquierda p {
+  font-size: 18px;
+  color: #000;
+}
+
+.linea-vertical {
+  width: 1px;
+  background-color: #000;
+  height: 100%;
+}
+
+.derecha {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.proyecto {
+  background-color: #fff;
+  text-align: left;
+  padding: 10px;
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.proyecto h2 {
+  font-size: 18px;
+  color: #000;
+  margin: 0 0 5px;
+}
+
+.proyecto p {
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+}
+#proyecto1 {
+  margin-top: 0;
+}
+
+#proyecto2 {
+  margin-top: 90px;
+}
+
+#proyecto3 {
+  margin-top: 0;
+}
+
+.button-list-container {
+  border-bottom: 1px solid black;
+}
+
+.button-list {
+  margin: 10px;
+}
+
+button {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background: white;
+  border: 1px solid black;
+  font-family: "Hodeien", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+#poem {
+  margin-bottom: 5px;
+}
+
+.poem-container {
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
   }
-  #menu a {
-    color: #FFF;
-    text-decoration: none;
-    margin: 5px 0;
-    display: block;
+
+  header nav ul {
+    justify-content: flex-start;
   }
-  #menu a:hover {
-    filter: blur(3px);
+
+  .contenedor {
+    flex-direction: column;
   }
+
+  .izquierda,
+  .derecha {
+    width: 100%;
+    height: auto;
+  }
+
+  .linea-vertical {
+    display: none;
+  }
+
+  .izquierda {
+    border-bottom: 1px solid black;
+  }
+  .derecha {
+    grid-template-columns: 1fr;
+  }
+}
