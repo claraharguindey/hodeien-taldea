@@ -95,11 +95,11 @@ const frases = [
 
 const poemContainer = document.getElementById("poem");
 const playButton = document.getElementById("playButton");
-const pauseButton = document.getElementById("pauseButton"); // Botón de pausa
+const pauseButton = document.getElementById("pauseButton");
 let selectedPhrases = [];
-let isPaused = false; // Estado de pausa
-let currentIndex = 0; // Índice de frase en reproducción
-let currentTimeout; // Almacena el setTimeout actual
+let isPaused = false;
+let currentIndex = 0;
+let currentTimeout;
 
 function createButtons() {
   const buttonList = document.getElementById("buttonList");
@@ -144,11 +144,11 @@ async function playPoem() {
 
 function pausePoem() {
   isPaused = true;
-  clearTimeout(currentTimeout); // Detener el timeout actual
+  clearTimeout(currentTimeout);
   const frase = selectedPhrases[currentIndex];
   if (frase) {
     const audioElement = document.getElementById(frase.audioId);
-    audioElement.pause(); // Pausar el audio actual
+    audioElement.pause();
   }
 }
 

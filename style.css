@@ -64,11 +64,11 @@ header nav ul li a:hover {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: cenlter;
-  justify-content: center;
   text-align: left;
   padding: 20px;
   box-sizing: border-box;
+  align-items: space-between;
+  justify-content: space-between;
 }
 
 #mitad-izquierda {
