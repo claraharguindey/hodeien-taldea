@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hodeien Taldea - territorio</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <link rel="stylesheet" href="./../style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./../index.html">Hodeien Taldea</a></li>
+        <li><a href="./../territorio">Territorio</a></li>
+        <li><a href="./../rio">Río</a></li>
+        <li><a href="./../palabra">Palabra</a></li>
+        <li><a href="https://desmusea.com/" target="_blank">Desmusea</a></li>
+      </ul>
+    </nav>
+    <div class="linea-header"></div>
+    <nav id="submenu">
+      <ul>
+        <li><a href="./index.html">Plaza</a></li>
+        <li><a href="./rio.html">Presa</a></li>
+        <li><a href="./huerto.html">Huertos</a></li>
+        <li><a href="./subida.html">Subida Olentzero</a></li>
+        <li><a href="./nuevo.html">Mapa nuevo</a></li>
+      </ul>
+    </nav>
+    <div class="linea-header"></div>
+  </header>
+
+  <div style="position: fixed; bottom: 10px; left: 10px; z-index: 9;">
+    <label for="skyImage">Cargar mapa:</label>
+    <input type="file" id="skyImage" accept="image/*">
+  </div>
+
+  <a-scene>
+    <a-sky id="sky" src="panoramas/none.png"></a-sky>
+    <a-entity camera look-controls position="0 1.6 0"></a-entity>
+    <a-light type="ambient" color="#FFF"></a-light>
+  </a-scene>
+
+  <script>
+    const sky = document.getElementById('sky');
+    const skyImageInput = document.getElementById('skyImage');
+
+    skyImageInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          sky.setAttribute('src', reader.result); 
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+
+</html>
