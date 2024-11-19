@@ -31,11 +31,33 @@
     </nav>
     <div class="linea-header"></div>
   </header>
+
+  <div style="position: fixed; bottom: 10px; z-index: 9;">
+    <label for="skyImage">Cargar mapa:</label>
+    <input type="file" id="skyImage" accept="image/*">
+  </div>
+
   <a-scene>
-    <a-sky src="panoramas/plaza.jpg"></a-sky>
+    <a-sky id="sky" src="panoramas/plaza.jpg"></a-sky>
     <a-entity camera look-controls position="0 1.6 0"></a-entity>
     <a-light type="ambient" color="#FFF"></a-light>
   </a-scene>
+
+  <script>
+    const sky = document.getElementById('sky');
+    const skyImageInput = document.getElementById('skyImage');
+
+    skyImageInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          sky.setAttribute('src', reader.result); 
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 </body>
 
 </html>
