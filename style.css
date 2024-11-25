@@ -222,8 +222,8 @@ svg {
 
 .modal-header {
   padding: 0 15px;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -238,7 +238,7 @@ svg {
 #close-btn {
   background: none;
   border: none;
-  color: black;
+  color: white;
   cursor: pointer;
   margin: 0;
   padding: 0;
