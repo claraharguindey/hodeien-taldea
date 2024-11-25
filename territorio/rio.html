@@ -31,10 +31,39 @@
       <div class="linea-header"></div>
     </header>
 
+    <div id="modal" class="modal">
+      <div class="modal-header" id="modal-header">
+        <span>Territorio</span>
+        <button id="close-btn">×</button>
+      </div>
+      <div class="modal-body">
+        <p>El primer encuentro del programa se centró en la representación del territorio. ¿Qué forma tiene Huarte en la
+          virtualidad?</p>
+  
+        <p>En esta sesión revisamos la evolución de su representación a través de la lectura de
+          cartografías del pueblo, desde el siglo XVII hasta nuestros días. Los mapas, en tanto imágenes, son artefactos
+          facticios: símbolos que acogen narraciones posibles sobre el lugar habitado.</p>
+  
+        <p>Los mapas virtuales inmersivos agudizan la sensación de neutralidad de estas representaciones a través de su
+          realismo formal, haciendo pasar la imagen por realidad.</p>
+        <p>En este encuentro descargamos algunas panorámicas de Google Street View y las imprimimos para intervenirlas
+          analógicamente.</p>
+        <p> Nos preguntamos, ¿qué falta? ¿Qué límites tiene esta representación?</p>
+        <p> Manipulamos las
+          imágenes para revelar su construcción y proponer nuevas lecturas.</p>
+        <p>Tras esto, volvimos a
+          digitalizar el mapa y poner así en circulación una nueva ficción posible, ahora con nuevas autoras.</p>
+  
+        <p>Puedes subir tu mapa (o cualquier imagen) aquí para navegarla de manera inmersiva.</p>
+      </div>
+    </div>
+    <div id="tab" class="tab">About</div>
+
     <a-scene>
       <a-sky src="panoramas/rio.jpg"></a-sky>
       <a-entity camera look-controls position="0 1.6 0"></a-entity>
       <a-light type="ambient" color="#FFF"></a-light>
     </a-scene>
+    <script src="./../modal.js"></script>
   </body>
 </html>
