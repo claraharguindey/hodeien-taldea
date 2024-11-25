@@ -295,7 +295,10 @@ g:hover .image-mapper-shape {
 .a-enter-vr.fullscreen .a-enter-vr-button {
   display: none;
 }
-@media (max-width: 768px) {
+.rio-instructions {
+  margin: 15px;
+}
+@media (max-width: 1281px) {
   canvas {
     display: none;
   }
@@ -319,5 +322,8 @@ g:hover .image-mapper-shape {
   }
   header nav ul li {
     margin: 0;
+  }
+  .modal {
+    width: 100%;
   }
 }

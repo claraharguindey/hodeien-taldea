@@ -131,7 +131,6 @@ async function playPoem() {
       audioElement.pause();
       currentIndex = i + 1;
       if (i === selectedPhrases.length - 1) {
-        alert("Poema finalizado");
         currentIndex = 0;
       }
     }, frase.duracion);
