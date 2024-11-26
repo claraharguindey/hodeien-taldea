@@ -16,6 +16,10 @@
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Hodeien", sans-serif;
   margin: 0;
@@ -270,14 +274,18 @@ svg {
 
 .image-mapper-shape {
   fill: rgba(255, 252, 127, 0.8);
+  scroll-margin-top: 30px;
 }
 
-g:hover .image-mapper-shape {
-  stroke: white;
-  stroke-width: 2px;
-  opacity: 20%;
+.image-mapper-shape-copy {
+  fill: rgba(255, 252, 127, 0.8);
+  scroll-margin-top: 30px;
 }
 
+.image-mapper-shape:hover,
+.image-mapper-shape-copy:hover {
+  opacity: 0.6;
+}
 .new-map-field {
   position: absolute;
   right: 0;
@@ -291,15 +299,41 @@ g:hover .image-mapper-shape {
 .new-map-field input {
   display: none;
 }
+
 .new-map-field label {
   cursor: pointer;
 }
+
 .a-enter-vr.fullscreen .a-enter-vr-button {
   display: none;
 }
+
 .rio-instructions {
   margin: 15px;
 }
+
+@keyframes blink {
+  0% {
+    fill: rgba(255, 252, 127, 0.8);
+  }
+  25% {
+    fill: rgba(255, 252, 127, 0);
+  }
+  50% {
+    fill: rgba(255, 252, 127, 0.8);
+  }
+  75% {
+    fill: rgba(255, 252, 127, 0);
+  }
+  100% {
+    fill: rgba(255, 252, 127, 0.8);
+  }
+}
+
+.blink {
+  animation: blink 3s ease-in-out 5;
+}
+
 @media (max-width: 1281px) {
   canvas {
     display: none;
