@@ -43,6 +43,18 @@
     <a-entity camera look-controls position="0 1.6 0"></a-entity>
     <a-light type="ambient" color="#FFF"></a-light>
   </a-scene>
+  <div id="modal" class="modal">
+    <div class="modal-header" id="modal-header">
+      <span>Territorio</span>
+      <button id="close-btn">×</button>
+    </div>
+    <div class="modal-body">
+
+      <p><span>&#8594;</span> Sube una nueva imagen para navegarla de manera inmersiva haciendo clic en "Cargar nuevo
+        mapa".</p>
+    </div>
+  </div>
+  <div id="tab" class="tab">About</div>
 
   <script>
     const sky = document.getElementById('sky');
@@ -53,7 +65,7 @@
       if (file) {
         const reader = new FileReader();
         reader.onload = () => {
-          sky.setAttribute('src', reader.result); 
+          sky.setAttribute('src', reader.result);
         };
         reader.readAsDataURL(file);
       }
