@@ -343,6 +343,10 @@ button:hover {
     margin: 0 5px;
   }
 
+  .left canvas {
+    display: none;
+  }
+
   .modal {
     width: 80%;
     max-height: 80%;
