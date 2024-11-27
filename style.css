@@ -186,8 +186,8 @@ button:hover {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 0;
   width: 100vw;
   border: 1px solid black;
@@ -334,7 +334,7 @@ svg {
   animation: blink 3s ease-in-out 5;
 }
 
-@media (max-width: 1281px) {
+@media (max-width: 768px) {
   canvas {
     display: none;
   }
