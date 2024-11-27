@@ -1,6 +1,6 @@
 function setup() {
     let canvas = createCanvas(windowWidth / 2, windowHeight);
-    canvas.parent("mitad-izquierda"); 
+    canvas.parent("canvas-side"); 
     background(255);
   }
   

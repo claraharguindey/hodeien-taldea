@@ -25,6 +25,8 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
+  display: flex;
+  height: 100vh;
 }
 
 header {
@@ -55,26 +57,17 @@ header nav ul li a:hover {
   color: #555;
 }
 
-.linea-header {
+.header-line {
   width: 100%;
   height: 1px;
   background-color: #000;
 }
 
-main {
-  padding-top: 22px;
-}
-
-p {
-  margin-top: 0;
-}
-.contenedor {
+.container {
   display: flex;
-  height: calc(100vh - 22px);
-  overflow: hidden;
 }
 
-.izquierda {
+.left {
   width: 50%;
   background-color: #fff;
   display: flex;
@@ -85,14 +78,12 @@ p {
   justify-content: space-between;
 }
 
-#mitad-izquierda {
+.left {
   position: relative;
   width: 50%;
-  height: calc(100vh - 22px);
-  overflow: hidden;
 }
 
-#mitad-izquierda canvas {
+.left canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -101,8 +92,7 @@ p {
   height: 100%;
 }
 
-.images-wrapper,
-#mitad-izquierda p {
+.left p {
   position: relative;
   z-index: 2;
   pointer-events: none;
@@ -123,35 +113,37 @@ p {
   max-height: fit-content;
 }
 
-.izquierda p {
-  color: #000;
-}
-
-.linea-vertical {
+.vertical-line {
   width: 1px;
   background-color: #000;
-  height: 100%;
+  height: 100vh;
 }
 
-.derecha {
+.right {
   width: 50%;
   padding: 15px;
-  overflow-y: hidden;
   display: flex;
 }
+
 .logo-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
-#mitad-izquierda p.logo-text {
+
+p.logo-text {
   font-size: 12px;
   margin: 0;
 }
+
 .logo {
   width: 60px;
   position: relative;
   z-index: 9;
+}
+
+.logo-wrapper-mobile {
+  display: none;
 }
 
 .button-list-container {
@@ -197,18 +189,12 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .grid-item img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
-}
-
-svg {
-  width: 100%;
-  height: 100%;
 }
 
 .modal {
@@ -238,7 +224,7 @@ svg {
 }
 
 .modal-body {
-  padding: 15px;
+  padding: 0 15px;
 }
 
 #close-btn {
@@ -314,67 +300,92 @@ svg {
 
 @keyframes blink {
   0% {
-    fill: rgba(255, 252, 127, 0.8);
+    fill: rgba(233, 30, 30, 0.3);
   }
   25% {
-    fill: rgba(255, 252, 127, 0);
+    fill: rgba(233, 30, 30, 0);
   }
   50% {
-    fill: rgba(255, 252, 127, 0.8);
+    fill: rgba(233, 30, 30, 0.3);
   }
   75% {
-    fill: rgba(255, 252, 127, 0);
+    fill: rgba(233, 30, 30, 0);
   }
   100% {
-    fill: rgba(255, 252, 127, 0.8);
+    fill: rgba(233, 30, 30, 0.3);
   }
 }
 
 .blink {
-  animation: blink 3s ease-in-out 5;
+  animation: blink 2s ease-in-out;
 }
 
 @media (max-width: 768px) {
+  header nav ul li a {
+    font-size: 28px;
+  }
   canvas {
     display: none;
   }
 
-  .contenedor {
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .izquierda,
-  .derecha {
-    width: 100%;
-    padding: 12px;
-  }
-
-  #mitad-izquierda {
-    width: 100%;
-    padding: 12px;
-    height: calc(100vh - 22px);
-    overflow: auto;
-  }
-
-  header nav ul li {
-    margin: 0;
-  }
   .modal {
     width: 80%;
     max-height: 80%;
     left: 20px;
   }
+
+  .modal-header span,
+  .modal-body p,
+  .modal-body p a,
+  #close-btn {
+    font-size: 32px;
+  }
+
   .modal-body {
     max-height: 100%;
     overflow: scroll;
   }
 
-  .images-wrapper {
-    justify-content: left;
-  }
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .left,
+  .right {
+    width: auto;
+  }
+
+  .left p {
+    font-size: 32px;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .logo-wrapper-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .logo-wrapper {
+    display: none;
+  }
+
+  .images-wrapper {
+    margin-bottom: 12px;
   }
 }
