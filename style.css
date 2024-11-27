@@ -188,6 +188,7 @@ button:hover {
 
 .poem-container {
   margin: 10px;
+  min-height: 70px;
 }
 
 .grid-container {
