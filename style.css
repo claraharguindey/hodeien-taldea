@@ -336,10 +336,11 @@ button:hover {
 
 @media (max-width: 768px) {
   header nav ul li a {
-    font-size: 1rem;
+    font-size: 15px;
   }
-  canvas {
-    display: none;
+
+  header nav ul li {
+    margin: 0 5px;
   }
 
   .modal {
@@ -374,12 +375,18 @@ button:hover {
   .left,
   .right {
     width: auto;
+    padding: 10px 5px;
   }
 
   .right {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+  }
+
+  .left p,
+  .left p a {
+    font-size: 16px;
   }
 
   .logo-wrapper-mobile {
@@ -396,7 +403,9 @@ button:hover {
   .images-wrapper {
     margin-bottom: 12px;
     flex-direction: column-reverse;
+    gap: 5px;
   }
+
   .images-wrapper img {
     width: 100%;
   }
