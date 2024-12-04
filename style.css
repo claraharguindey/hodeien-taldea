@@ -336,6 +336,10 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  .poem-container {
+    padding-bottom: 30px;
+  }
+  
   .a-enter-vr.fullscreen .a-enter-vr-button {
     display: none;
   }
