@@ -221,7 +221,7 @@ button:hover {
   background-color: white;
   display: flex;
   flex-direction: column;
-  transform: translateY(600%);
+  transform: translateY(1000%);
   transition: transform 0.3s ease-in-out;
   border: 1px solid black;
   z-index: 1000;
